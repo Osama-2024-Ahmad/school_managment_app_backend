@@ -87,6 +87,4 @@ This backend serves the Nova School Management Frontend.
 **Frontend Repository:** [Link to Frontend Repo](https://github.com/Osama-2024-Ahmad/school_managment_app_frontend)
 **Live App:** [https://school-managment-app-frontend.vercel.app/](https://school-managment-app-frontend.vercel.app/)
 
-## 📝 License
 
-This project is licensed under the MIT License.
