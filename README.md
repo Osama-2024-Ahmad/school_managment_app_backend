@@ -1,39 +1,52 @@
-# 🏫 School Management System - Backend
+# 🏫 Nova School Management System - Backend
 
-A robust and scalable backend API for the Nova School Management System, built with **Django** and **Django REST Framework**. This system manages core educational data including students, teachers, academic programs, events, and testimonials.
+A robust, scalable, and secure RESTful API for the Nova School Management System, built with **Django** and **Django REST Framework**. This backend powers the frontend application, managing data consistency, user authentication, and business logic.
 
-## 🚀 Features
+## 🚀 Live API
 
--   **User Authentication**: Secure authentication for students, teachers, and administrators.
--   **Teacher Management**: Profiles, subject assignments, and details.
--   **Program & Curriculum**: Management of academic programs, courses, and schedules.
--   **Event Scheduling**: Calendar and event management for school activities.
--   **Testimonials**: System for collecting and displaying feedback from students and parents.
--   **Media Management**: Handling of images and documents (profiles, event banners).
+**Base URL:** [https://school-managment-app-backend.onrender.com](https://school-managment-app-backend.onrender.com)
 
-## 🛠️ Tech Stack
+## 🛠️ Technologies Used
 
--   **Framework**: Django 5.x
--   **API**: Django REST Framework (DRF)
--   **Database**: SQLite (Development) / PostgreSQL (Production ready)
--   **Authentication**: JWT / Session-based
--   **CORS**: `django-cors-headers` for frontend integration
+-   **Framework:** [Django](https://www.djangoproject.com/) (v5.x) - High-level Python web framework.
+-   **API Toolkit:** [Django REST Framework (DRF)](https://www.django-rest-framework.org/) - For building Web APIs.
+-   **Database:**
+    -   **Development:** SQLite
+    -   **Production:** PostgreSQL (Recommended for scaling)
+-   **Authentication:** Token-based authentication (DRF Auth).
+-   **Server:** [Gunicorn](https://gunicorn.org/) - WSGI HTTP Server for UNIX.
+-   **CORS:** `django-cors-headers` - Handling Cross-Origin Resource Sharing.
+-   **Deployment:** [Render](https://render.com/)
+
+## ✨ Key Features
+
+-   **RESTful Endpoints:** Comprehensive API endpoints for CRUD operations.
+-   **Authentication & Authorization:** Secure user registration, login, and role-based access control.
+-   **Data Management:**
+    -   **Teachers:** Manage profiles, subjects, and images.
+    -   **Students:** Grade tracking and profile management.
+    -   **Programs:** Course details, pricing, and schedules.
+    -   **Events:** Event planning and announcements.
+-   **Media Handling:** Serving static and media files (images, documents).
+-   **Admin Panel:** Built-in Django Admin interface for easy content management.
 
 ## 📂 Project Structure
 
 ```bash
 backend/
-├── school/                 # Core app (Students, General Logic)
+├── school/                 # Core application logic
 ├── teachers/               # Teacher management app
 ├── programs/               # Academic programs app
 ├── events/                 # Event management app
-├── testimonials/           # Feedback & Testimonials app
-├── school_management_app/  # Project configuration (Settings, URLs)
-├── media/                  # User uploaded content
-└── manage.py               # Django CLI utility
+├── testimonials/           # Feedback system app
+├── school_management_app/  # Project settings and configuration
+├── media/                  # Uploaded media files
+└── manage.py               # Django command-line utility
 ```
 
 ## 🔧 Installation & Setup
+
+To run this project locally:
 
 1.  **Clone the repository**
     ```bash
@@ -57,25 +70,23 @@ backend/
     python manage.py migrate
     ```
 
-5.  **Run the Development Server**
+5.  **Create a Superuser (Optional)**
+    ```bash
+    python manage.py createsuperuser
+    ```
+
+6.  **Start the Development Server**
     ```bash
     python manage.py runserver
     ```
-    The API will be available at `http://127.0.0.1:8000/`.
+    The API will be available at [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
 
-## 📡 API Endpoints (Examples)
+## 🤝 Frontend
 
--   `GET /api/teachers/` - List all teachers
--   `GET /api/programs/` - List available programs
--   `GET /api/events/` - Upcoming events
--   `POST /api/testimonials/` - Submit a testimonial
+This backend serves the Nova School Management Frontend.
+**Frontend Repository:** [Link to Frontend Repo](https://github.com/Osama-2024-Ahmad/school_managment_app_frontend)
+**Live App:** [https://school-managment-app-frontend.vercel.app/](https://school-managment-app-frontend.vercel.app/)
 
-## 🤝 Contributing
+## 📝 License
 
-1.  Fork the repository
-2.  Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
-
-
+This project is licensed under the MIT License.
